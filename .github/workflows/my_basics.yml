@@ -1,0 +1,18 @@
+#-------------
+# My Github Actions lesson
+#-------------
+
+name: My_Actions_basics
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  test_job_1:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Printing_something
+      run : echo "Hi"
