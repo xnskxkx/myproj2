@@ -7,7 +7,7 @@ name: My_Actions_basics
 on:
   push:
     branches: 
-      - master
+      - main
 
 jobs:
   test_job_1:
