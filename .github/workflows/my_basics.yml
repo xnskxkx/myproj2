@@ -16,3 +16,11 @@ jobs:
     steps:
     - name: Printing_something
       run : echo "Hi"
+
+  build_job_1:
+    runs-on: ubuntu-latest
+    needs: [test_job_1]
+
+    steps:
+    - name: Printing_in_build
+      run : echo "Bye in build"
