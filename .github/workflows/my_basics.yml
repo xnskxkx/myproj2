@@ -3,8 +3,11 @@
 #-------------
 
 name: My_Actions_basics
+env :
+  APP_NAME    : "My_Test_proj"
+  DEPLOY_PACKAGE_NAME : "prog_deploy_ver_${{ github.sha }}"
 
-on:
+on: 
   push:
     branches: 
       - main
@@ -15,7 +18,10 @@ jobs:
 
     steps:
     - name: Printing_something
-      run : echo "Hi"
+      run : |
+        echo "Hi"
+        echo "Your dpn is ${{ env.DEPLOY_PACKAGE_NAME }}"
+        echo "This app name is ${{ env.APP_NAME }}"
 
 
   build_job_1:
